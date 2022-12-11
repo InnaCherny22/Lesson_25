@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+body {
+	font-family: "Lato";
+	color: white;
+	background-color: rgb(58, 53, 53);
+}
+.wrapper {
+	position: relative;
+	overflow: hidden;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+.wraper > main {
+	flex-grow: 1;
+}
+[class*="__container"]{
+	max-width: 1260px;
+	margin: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.page__button {
+	display: none;
+
+}
+.page__button._active {
+display: flex;
+	margin-left: 500px;
+	margin-top: 80px;
+	font-size: 26px;
+	font-weight: 900;
+	color: gold;
+	justify-content: center;
+	align-items: center;
+}
+.page__button._active::after {
+	content: '';
+	width: 40px;
+	height: 40px;
+	background-color: aquamarine;
+	border-radius: 50%;
+	position: relative;
+	left: -35px;
+}
+.page__img {
+margin-left: 15px;
+z-index: 2;
+}
+.page__search {
+	display: none;
+}
+.page__search._active {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+	flex-wrap: wrap;
+}
+.page__imput {
+	margin-left: 200px;
+	width: 400px;
+	height: 50px;
+	border: 2px solid rgb(8, 107, 182);
+	border-radius: 4px;
+	background-color: rgb(58, 53, 53);
+	color: azure;
+}
+.page__counter { 
+	display: block;
+	color: coral;
+	position: absolute;
+    bottom: 66%;
+    left: 38%;
+	font-size: 20px;
+}
+	
+.page__but {
+	font-weight: 700;
+	padding: 10px;
+	color: #fff;
+	line-height: 1.2;
+	background: rgb(147, 212, 16);
+	border-radius: 4px;
+	transition: all 0.3s;
+    animation: flicker 2s infinite;
+}
+
+.page__but:hover {
+	content: "";
+	background: rgb(16, 163, 212);
+	transition: all 0.3s;
+}
